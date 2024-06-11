@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 1 - Biodata</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('wallpaper.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #333;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #218838;
+    }
+    .biodata {
+      margin-top: 20px;
+    }
+    .biodata img {
+      max-width: 200px;
+      border-radius: 50%;
+    }
+    .biodata p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Biodata</h1>
+    <div class="biodata">
+      <img src="mypicture.jpg" alt="Your Image">
+      <p>Name: Muhamad Syafiq Bin Sizaini</p>
+      <p>Age: 24</p>
+      <p>Gender: Male</p>
+      <p>Date of Birth: September 4, 2000</p>
+      <p>Place of Birth: Kota Baharu, Kelantan</p>
+      <p>Height: 159 cm</p>
+      <p>Weight: 45 kg</p>
+      <p>Relationship Status: Single</p>
+    </div>
+    <button class="button" onclick="window.location.href='index.html'">Back</button>
+  </div>
+</body>
+</html>
+
