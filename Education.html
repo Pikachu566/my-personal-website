@@ -23,6 +23,8 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Adjusted box shadow */
+      max-width: 800px; /* Set max-width for the container */
+      margin: 0 auto; /* Center the container horizontally */
     }
     h1 {
       color: white;
@@ -50,6 +52,7 @@
     }
     .education img {
       max-width: 100%; /* Ensures images are responsive */
+      height: auto; /* Maintain aspect ratio */
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       margin-bottom: 10px; /* Added margin bottom for spacing */
@@ -60,9 +63,12 @@
     }
 	
     @media screen and (max-width: 600px) {
-      .button {
-        display: block;
-        margin: 10px auto;
+      .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+      }
+      .education img {
+        max-width: 100%; /* Adjust image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
       }
     }
   </style>
