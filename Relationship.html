@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page 4 - Projects</title>
+  <title>Page - Relationship</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,15 +14,19 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      color: white;
+      background-color: #222;
     }
     .container {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(0, 0, 0, 0.0);
       padding: 20px;
       border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.0);
     }
     h1 {
-      color: #333;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
     .button {
       display: inline-block;
@@ -30,12 +34,13 @@
       margin: 10px;
       border: none;
       border-radius: 5px;
-      background-color: #28a745;
+      background-color: #dc3545;
       color: #fff;
       text-decoration: none;
       font-size: 16px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
     .button:hover {
       background-color: #218838;
@@ -43,31 +48,39 @@
     .buttons {
       display: flex;
       justify-content: center;
+      margin-top: 20px;
     }
     .projects {
       margin-top: 20px;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     }
     .projects img {
       max-width: 200px;
       margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     }
     .projects p {
       margin: 5px 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      .button {
+        display: block;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Relationship</h1>
-    <div class="Project">
+    <div class="projects">
       <p>Kosong Lagi😅</p>
       <img src="yourname.jpg" alt="Project 1">
-      <p>Cari Apa Kat Sini?</p>
+      <h1>Cari Apa Kat Sini?</h1>
       <p>Andai Kata suka aku dalam diam, tekan ja [NEXT],</p>
-	  <p>button [NEXT] tu takde button patah balik tau,</p>
-	  <p>aku dah penat nak kenal orang,</p>
-	  <p>dan aku dah tak larat nak cari pasangan,</p>
-	  <p>harap faham la situasi aku</p>
 	  <p>kalau takde apa-apa, tekan ja button [BACK],</p>
     </div>
     <div class="buttons">
