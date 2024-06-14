@@ -14,42 +14,55 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      color: white; /* Tukar warna teks kepada putih */
+      background-color: #222; /* Tukar warna latar belakang kepada lebih gelap */
     }
     .container {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(0, 0, 0, 0.0); /* Menyediakan ketelusan hitam */
       padding: 20px;
       border-radius: 10px;
     }
     h1, p {
-      color: #333;
+      color: white; /* Tukar warna teks h1 dan p kepada putih */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Bayang teks ditambah */
     }
     .button {
       display: inline-block;
       padding: 10px 20px;
       margin: 10px;
       border: none;
-      border-radius: 5px;
-      background-color: #28a745;
+      border-radius: 5px; /* Tetapkan sudut imej */
+      background-color: #dc3545; /* Warna merah */
       color: #fff;
       text-decoration: none;
       font-size: 16px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Bayang butang ditambah */
     }
     .button:hover {
       background-color: #218838;
+    }
+	
+
+    /* CSS untuk butang mudah alih */
+    @media screen and (max-width: 600px) {
+      .button {
+        display: block;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Welcome to My Personal Website</h1>
-	<h1>Selamat datang ke Laman Web Peribadi Saya</h1>
+    <h1>Selamat datang ke Laman Web Peribadi Saya</h1>
     <p>This is the main page of my personal website.</p>
     <p>Please explore the sections below.</p>
-	<p>Ini adalah halaman utama laman web peribadi saya.</p>
-	<p>Sila teroka bahagian di bawah.</p>
+    <p>Ini adalah halaman utama laman web peribadi saya.</p>
+    <p>Sila teroka bahagian di bawah.</p>
     <button class="button" onclick="window.location.href='Biodata.html'">Biodata</button>
     <button class="button" onclick="window.location.href='Education.html'">Education</button>
     <button class="button" onclick="window.location.href='Experience.html'">Work And Experience</button>
@@ -58,4 +71,3 @@
   </div>
 </body>
 </html>
-
