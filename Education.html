@@ -19,12 +19,12 @@
     }
     .container {
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.8); /* Adjusted background transparency */
+      background-color: rgba(0, 0, 0, 0.0);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Adjusted box shadow */
-      max-width: 800px; /* Set max-width for the container */
-      margin: 0 auto; /* Center the container horizontally */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.0);
+      max-width: 800px;
+      margin: 0 auto;
     }
     h1 {
       color: white;
@@ -51,7 +51,7 @@
       margin-top: 20px;
     }
     .education img {
-      max-width: 100%; /* Ensures images are responsive */
+      max-width: 40%; /* Ensures images are responsive */
       height: auto; /* Maintain aspect ratio */
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -62,13 +62,14 @@
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     }
 	
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 50px) {
       .container {
         padding: 10px; /* Adjust padding for smaller screens */
       }
       .education img {
-        max-width: 100%; /* Adjust image size for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure image is displayed as block element */
+        margin: 0 auto; /* Center the image horizontally */
+        max-width: 80%; /* Adjust image size for smaller screens */
       }
     }
   </style>
