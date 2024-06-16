@@ -29,14 +29,16 @@
     }
     .button {
       display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
+      width: 100%; /* Ensure buttons take full width of their container */
+      font-size: 14px; /* Ensure font size is the same */
+      padding: 10px 20px; /* Adjust padding for buttons in the box */
+      margin: 10px 0; /* Ensure margin is the same */
       border: none;
       border-radius: 5px; /* Tetapkan sudut imej */
       background-color: #dc3545; /* Warna merah */
       color: #fff;
       text-decoration: none;
-      font-size: 16px;
+      text-align: center;
       cursor: pointer;
       transition: background-color 0.3s ease;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Bayang butang ditambah */
@@ -44,7 +46,23 @@
     .button:hover {
       background-color: #218838;
     }
-	
+    .button-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 200px; /* Set a fixed width for the button box */
+      background-color: rgba(0, 0, 0, 0.0);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+      display: flex;
+      flex-direction: column;
+    }
+    .additional-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center align items horizontally */
+    }
 
     /* CSS untuk butang mudah alih */
     @media screen and (max-width: 600px) {
@@ -52,10 +70,40 @@
         display: block;
         margin: 10px auto;
       }
+      .button-box {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px; /* Adjust top position for mobile */
+      }
     }
   </style>
+  <script>
+    function toggleButtons() {
+      var buttonBox = document.querySelector('.button-box');
+      var buttonsVisible = buttonBox.querySelector('.additional-buttons');
+
+      if (buttonsVisible) {
+        // Hide buttons
+        buttonBox.innerHTML = '<button class="button button-show-more" onclick="toggleButtons()">Show more</button>';
+      } else {
+        // Show buttons
+        var additionalButtons = '<div class="additional-buttons">' +
+          '<button class="button" onclick="window.location.href=\'https://pikachu566.github.io/you-like-me/\'">You Like Me? (Click)</button>' +
+          '<button class="button" onclick="window.location.href=\'https://pikachu566.github.io/deface/\'">Deface example(New Website)</button>' +
+          '<button class="button" onclick="window.location.href=\'\'">Blank</button>' +
+          '<button class="button" onclick="window.location.href=\'\'">Blank</button>' +
+          '</div>';
+        buttonBox.innerHTML = '<button class="button button-show-more" onclick="toggleButtons()">Close</button>' + additionalButtons;
+      }
+    }
+  </script>
 </head>
 <body>
+  <div class="button-box">
+    <button class="button button-show-more" onclick="toggleButtons()">Show more</button>
+  </div>
+
   <div class="container">
     <h1>Welcome to My Personal Website</h1>
     <h1>Selamat datang ke Laman Web Peribadi Saya</h1>
@@ -65,7 +113,7 @@
     <p>Sila teroka bahagian di bawah.</p>
     <button class="button" onclick="window.location.href='Biodata.html'">Biodata</button>
     <button class="button" onclick="window.location.href='Education.html'">Education</button>
-    <button class="button" onclick="window.location.href='Experience.html'">Work And Experience</button>
+    <button class="button" onclick="window.location.href='Experience.html'">Experience</button>
     <button class="button" onclick="window.location.href='Relationship.html'">Relationship</button>
     <button class="button" onclick="window.location.href='Contact.html'">Next</button>
   </div>
