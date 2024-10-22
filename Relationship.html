@@ -71,6 +71,15 @@
         margin: 10px auto;
       }
     }
+    footer {
+      position: absolute; /* Letak footer di tempat tetap */
+      bottom: 10px; /* Letak footer di bahagian bawah */
+      left: 50%; /* Untuk meletakkan di tengah */
+      transform: translateX(-50%); /* Untuk mengimbangi posisi */
+      color: white; /* Warna teks footer */
+      text-align: center; /* Pusatkan teks */
+      width: 100%; /* Penuhkan lebar footer */
+    }
   </style>
 </head>
 <body>
@@ -80,13 +89,17 @@
       <p>Kosong Lagi😅</p>
       <img src="yourname.jpg" alt="Project 1">
       <h1>Cari Apa Kat Sini?</h1>
-      <p>Kalau Suka Aku Tekan [NEXT],</p>
-	  <p>Kalau Takda Apa-apa, Tekan [BACK],</p>
+      <p>Andai Kata suka aku dalam diam, tekan ja [NEXT],</p>
+      <p>kalau takde apa-apa, tekan ja button [BACK],</p>
     </div>
     <div class="buttons">
       <button class="button" onclick="window.location.href='index.html'">Back</button>
       <button class="button" onclick="window.location.href='https://pikachu566.github.io/you-like-me/'">Next</button>
     </div>
   </div>
+
+  <footer>
+    <p>Hak Cipta &copy; 2024 Fiq</p>
+  </footer>
 </body>
 </html>
