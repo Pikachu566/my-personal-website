@@ -77,6 +77,14 @@
         top: 10px; /* Adjust top position for mobile */
       }
     }
+
+    footer {
+      position: absolute;
+      bottom: 10px; /* Letak footer di bahagian bawah */
+      left: 50%;
+      transform: translateX(-50%); /* Center footer */
+      color: white; /* Warna teks footer */
+    }
   </style>
   <script>
     function toggleButtons() {
@@ -89,8 +97,8 @@
       } else {
         // Show buttons
         var additionalButtons = '<div class="additional-buttons">' +
-          '<button class="button" onclick="window.location.href=\'https://pikachu566.github.io/you-like-me/\'">You like me?</button>' +
-          '<button class="button" onclick="window.location.href=\'https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/\'">Pakej PC</button>' +
+          '<button class="button" onclick="window.location.href=\'https://pikachu566.github.io/you-like-me/\'">You Like Me? (Click)</button>' +
+          '<button class="button" onclick="window.location.href=\'https://pikachu566.github.io/deface/\'">Deface example(New Website)</button>' +
           '<button class="button" onclick="window.location.href=\'\'">Blank</button>' +
           '<button class="button" onclick="window.location.href=\'\'">Blank</button>' +
           '</div>';
@@ -117,5 +125,9 @@
     <button class="button" onclick="window.location.href='Relationship.html'">Relationship</button>
     <button class="button" onclick="window.location.href='Contact.html'">Next</button>
   </div>
+
+  <footer>
+    <p>Hak Cipta &copy; 2024 Fiq</p>
+  </footer>
 </body>
 </html>
