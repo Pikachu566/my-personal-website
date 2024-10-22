@@ -61,7 +61,7 @@
       margin: 10px 0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     }
-	
+    
     @media screen and (max-width: 50px) {
       .container {
         padding: 10px; /* Adjust padding for smaller screens */
@@ -71,6 +71,15 @@
         margin: 0 auto; /* Center the image horizontally */
         max-width: 80%; /* Adjust image size for smaller screens */
       }
+    }
+    footer {
+      position: absolute; /* Letak footer di tempat tetap */
+      bottom: 10px; /* Letak footer di bahagian bawah */
+      left: 50%; /* Untuk meletakkan di tengah */
+      transform: translateX(-50%); /* Untuk mengimbangi posisi */
+      color: white; /* Warna teks footer */
+      text-align: center; /* Pusatkan teks */
+      width: 100%; /* Penuhkan lebar footer */
     }
   </style>
 </head>
@@ -87,5 +96,9 @@
     </div>
     <button class="button" onclick="window.location.href='index.html'">Back</button>
   </div>
+
+  <footer>
+    <p>Hak Cipta &copy; 2024 Fiq</p>
+  </footer>
 </body>
 </html>
