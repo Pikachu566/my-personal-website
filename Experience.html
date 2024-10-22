@@ -16,6 +16,7 @@
       margin: 0;
       color: white;
       background-color: #222;
+      flex-direction: column; /* Adjust direction for stacking */
     }
     .container {
       text-align: center;
@@ -23,6 +24,7 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.0);
+      flex: 1; /* Ensure container takes up available space */
     }
     h1 {
       color: white;
@@ -65,13 +67,11 @@
       }
     }
     footer {
-      position: absolute; /* Letak footer di tempat tetap */
-      bottom: 10px; /* Letak footer di bahagian bawah */
-      left: 50%; /* Untuk meletakkan di tengah */
-      transform: translateX(-50%); /* Untuk mengimbangi posisi */
-      color: white; /* Warna teks footer */
-      text-align: center; /* Pusatkan teks */
-      width: 100%; /* Penuhkan lebar footer */
+      margin-top: auto; /* Push footer to the bottom */
+      padding: 10px 0; /* Add padding for spacing */
+      text-align: center; /* Center the text */
+      color: white; /* Text color */
+      width: 100%; /* Ensure footer spans full width */
     }
   </style>
 </head>
