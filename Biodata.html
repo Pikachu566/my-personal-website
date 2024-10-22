@@ -18,24 +18,20 @@
       background-color: #222;
     }
     .container {
-      text-align: left; 
+      text-align: center;
       background-color: rgba(0, 0, 0, 0.0);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.0);
-      max-width: 400px;
     }
     h1 {
-      text-align: center; 
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
-    .button-container {
-      text-align: center; 
-      margin-top: 20px;
-    }
     .button {
+      display: inline-block;
       padding: 10px 20px;
+      margin: 10px;
       border: none;
       border-radius: 5px;
       background-color: #dc3545;
@@ -53,103 +49,70 @@
       margin-top: 20px;
     }
     .biodata img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
       max-width: 200px;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     }
     .biodata p {
       margin: 5px 0;
-      padding-left: 10px; 
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-    .timer-container {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 18px;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     }
     footer {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+      margin-top: 20px; /* Tambah jarak antara button dan hak cipta */
       color: white;
       text-align: center;
       width: 100%;
     }
   </style>
   <script>
+    // Script untuk kira umur berdasarkan tarikh lahir
     function calculateAge() {
-      var birthDate = new Date("2000-09-04"); // Tarikh lahir
-      var today = new Date();
-      var age = today.getFullYear() - birthDate.getFullYear();
-      var monthDifference = today.getMonth() - birthDate.getMonth();
-      var dayDifference = today.getDate() - birthDate.getDate();
-
-      // Jika hari lahir belum tiba tahun ni, tolak satu dari umur
-      if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+      const birthDate = new Date(2000, 8, 4); // 4 Sept 2000
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      const dayDiff = today.getDate() - birthDate.getDate();
+      
+      // Kira umur sebenar bergantung pada hari lahir yang telah lepas atau belum
+      if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
         age--;
       }
-
-      document.getElementById("age").innerHTML = "Age: " + age;
-    }
-
-    // Fungsi kira masa kehidupan
-    function lifeTime() {
-      var birthDate = new Date("2000-09-04T00:00:00"); // Tarikh lahir dengan masa
-      var now = new Date();
-      var lifeDuration = now - birthDate;
-
-      var seconds = Math.floor((lifeDuration / 1000) % 60);
-      var minutes = Math.floor((lifeDuration / 1000 / 60) % 60);
-      var hours = Math.floor((lifeDuration / 1000 / 60 / 60) % 24);
-      var days = Math.floor(lifeDuration / 1000 / 60 / 60 / 24);
-
-      document.getElementById("life-timer").innerHTML =
-        "Days: " + days + " | " +
-        "Hours: " + hours + " | " +
-        "Minutes: " + minutes + " | " +
-        "Seconds: " + seconds;
-    }
-
-    // Kira umur dan masa kehidupan secara automatik bila laman dibuka
-    window.onload = function() {
-      calculateAge();
-      setInterval(lifeTime, 1000); // Update masa kehidupan setiap 1 saat
+      document.getElementById('age').innerText = age;
+      
+      // Kira masa hidup dalam saat, minit, jam, dan hari
+      const lifeTimeInSeconds = Math.floor((today - birthDate) / 1000);
+      const seconds = lifeTimeInSeconds % 60;
+      const minutes = Math.floor(lifeTimeInSeconds / 60) % 60;
+      const hours = Math.floor(lifeTimeInSeconds / 3600) % 24;
+      const days = Math.floor(lifeTimeInSeconds / (3600 * 24));
+      
+      document.getElementById('lifetime').innerText = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+      
+      // Ulang fungsi setiap 1 saat
+      setTimeout(calculateAge, 1000);
     }
   </script>
 </head>
-<body>
+<body onload="calculateAge()">
   <div class="container">
     <h1>Biodata</h1>
     <div class="biodata">
       <img src="mypicture.jpg" alt="Your Image">
       <p>Name: Muhamad Syafiq Bin Sizaini</p>
-      <p id="age">Age: 24</p> <!-- Umur dikira secara automatik -->
+      <p>Age: <span id="age">24</span></p> <!-- Umur akan dikira secara automatik -->
       <p>Gender: Male</p>
       <p>Date of Birth: September 4, 2000</p>
       <p>Place of Birth: Kota Baharu, Kelantan</p>
       <p>Height: 159 cm</p>
       <p>Weight: 45 kg</p>
       <p>Relationship Status: Single</p>
+      <p>Life Time: <span id="lifetime"></span></p> <!-- Masa kehidupan -->
     </div>
-
-    <!-- Timer untuk masa kehidupan -->
-    <div class="timer-container">
-      <p>Masa kehidupan:</p>
-      <p id="life-timer">Calculating...</p>
-    </div>
-
-    <div class="button-container">
-      <button class="button" onclick="window.location.href='index.html'">Back</button>
-    </div>
+    <button class="button" onclick="window.location.href='index.html'">Back</button>
+    <footer>
+      <p>Hak Cipta &copy; 2024 Fiq</p>
+    </footer>
   </div>
-
-  <footer>
-    <p>Hak Cipta &copy; 2024 Fiq</p>
-  </footer>
 </body>
 </html>
+
