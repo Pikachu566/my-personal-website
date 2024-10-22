@@ -16,6 +16,7 @@
       margin: 0;
       color: white;
       background-color: #222;
+      flex-direction: column; /* Adjust to column for button and footer stacking */
     }
     .container {
       text-align: center;
@@ -73,13 +74,10 @@
       }
     }
     footer {
-      position: absolute; /* Letak footer di tempat tetap */
-      bottom: 10px; /* Letak footer di bahagian bawah */
-      left: 50%; /* Untuk meletakkan di tengah */
-      transform: translateX(-50%); /* Untuk mengimbangi posisi */
-      color: white; /* Warna teks footer */
-      text-align: center; /* Pusatkan teks */
-      width: 100%; /* Penuhkan lebar footer */
+      margin-top: 20px; /* Added margin for spacing */
+      color: white; /* Text color */
+      text-align: center; /* Center the text */
+      width: 100%; /* Ensure it stretches full width */
     }
   </style>
 </head>
